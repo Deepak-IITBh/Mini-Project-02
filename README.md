@@ -63,7 +63,7 @@ Image-Captioning/
 
 ### 1. Clone the Repository:
 ```bash
-git clone https://github.com/shivamlth27/Image-captioning.git
+git clone https://github.com/Deepak-IITBh/Mini-Project-02.git
 cd Image-Captioning
 ```
 
