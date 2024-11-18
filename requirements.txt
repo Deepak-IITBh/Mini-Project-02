@@ -1,0 +1,13 @@
+flask
+torch
+transformers
+pillow
+requests
+gTTS
+sacremoses
+sentencepiece
+bitsandbytes
+accelerate
+nltk
+git+https://github.com/AI4Bharat/IndicTrans2.git
+git+https://github.com/VarunGumma/IndicTransToolkit.git
