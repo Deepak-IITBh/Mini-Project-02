@@ -1,0 +1,45 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Caption Translation</title>
+</head>
+<body>
+    <h1>Image Caption Translation App</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <select name="language">
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+            <option value="bn">Bengali</option>
+            <option value="mr">Marathi</option>
+        </select>
+        <input type="submit" value="Generate Caption">
+    </form>
+</body>
+</html>
+
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caption Result</title>
+</head>
+<body>
+    <h1>Image Caption Results</h1>
+    <h2>Original Caption (English)</h2>
+    <p>{{ original_caption }}</p>
+    
+    <h2>Translated Caption ({{ language }})</h2>
+    <p>{{ translated_caption }}</p>
+    
+    <audio controls>
+        <source src="{{ url_for('get_speech', text=translated_caption, language=language) }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <br>
+    <a href="{{ url_for('index') }}">Upload Another Image</a>
+</body>
+</html>
